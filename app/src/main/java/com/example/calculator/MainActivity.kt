@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         textScreen = binding.textScreen
 
-        println("salom")
-
         Toast.makeText(this, "\uD83D\uDD25Created by Iskandar Developer\uD83D\uDD25", Toast.LENGTH_SHORT).show()
 
         binding.numberZero.setOnClickListener {
