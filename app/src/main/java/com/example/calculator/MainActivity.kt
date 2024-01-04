@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var textScreen: TextView
     private var hasResult = false
@@ -22,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         textScreen = binding.textScreen
+
+        println("salom")
 
         Toast.makeText(this, "\uD83D\uDD25Created by Iskandar Developer\uD83D\uDD25", Toast.LENGTH_SHORT).show()
 
@@ -186,7 +187,7 @@ class MainActivity : AppCompatActivity() {
             val example = textScreen.text.toString()
             for (i in example.indices) {
                 if (example[i] == '=') {
-                    textScreen.text = "${example.subSequence(i + 1, example.length)}$action"
+                    textScreen.text = "${example.subSequence(i + 3, example.length)}$action"
                 }
             }
             hasResult = false
